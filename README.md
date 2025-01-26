@@ -24,7 +24,7 @@
 
 ## Key Components
 
-1. CounterBloc
+### 1. CounterBloc
 
 This BLoC manages the state of the counter.
 
@@ -40,7 +40,7 @@ This BLoC manages the state of the counter.
   
   - Logic: The BLoC listens to CounterBlocEvent events and updates the state based on the event type.
 
-2. ThemeBlocBloc
+### 2. ThemeBlocBloc
 
   This BLoC manages the app's theme.
   
@@ -56,15 +56,15 @@ This BLoC manages the state of the counter.
   
   3. Logic: The BLoC toggles the theme state whenever a Toggletheme event is received.
 
-3. Main App Flow
+### 3. Main App Flow
 
 - Entry Point: The main function initializes the app and wraps it with MultiBlocProvider to provide both CounterBloc and ThemeBlocBloc to the widget tree.
 
-4. Theme Management:
+### 4. Theme Management:
 
 - BlocBuilder<ThemeBlocBloc, ThemeBlocState> rebuilds the MaterialApp with the appropriate theme (ThemeData.light or ThemeData.dark) based on the current state.
 
-5. Counter Screen:
+### 5. Counter Screen:
 
 - The Counter screen displays the current counter value and provides buttons to increment or decrement it.
 
